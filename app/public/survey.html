@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder KA</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class='row'>
+            <div style="padding-top: 20px;">
+                <h3 class="display-3">PERSONALITY
+                    <small class="text-muted">QUESTIONNAIRE:</small></h3>
+                <hr class="my-8">
+                <h6 class="display-6">Please complete the survey by responding to the following statements.
+                    <br> For each statement select an answer using the scale 1-5, where 1 represents "strongly disagree" and 5 represents "strongly agree".
+                    <br> Be sure to include a hyperlink to an image of yourself as well!</h6>
+                <br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div style="padding: 10px;" class="col-lg-12 border">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form method="POST" role="form">
+
+                            <div class="form-group">
+                                <label for="name">Name <small class="text-muted">(Required):</small></label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="image">Image <small class="text-muted">(Required):</small> </label>
+                                <input type="text" class="form-control" id="photoInput">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="questions">"I believe in the importance of art."</label>
+                                <select class="form-control selection custom-select" id="question1">
+                                  <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="questions">"I prefer variety to routine."</label>
+                                <select class="form-control selection custom-select" id="question2">
+                                  <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="questions">"I dislike being the center of attention."</label>
+                                <select class="form-control selection custom-select" id="question3">
+                                <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="questions">"I warm up quickly to others."</label>
+                                <select class="form-control selection custom-select" id="question4">
+                                  <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="questions">"I love to read challenging material."</label>
+                                <select class="form-control selection custom-select" id="question5">
+                                  <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="questions">"I love large parties."</label>
+                                <select class="form-control selection custom-select" id="question6">
+                                  <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="questions">"I am passionate about causes."</label>
+                                <select class="form-control selection custom-select" id="question7">
+                                  <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="questions">"I value cooperation over competition."</label>
+                                <select class="form-control selection custom-select" id="question8">
+                                  <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="questions">"I am easily stressed."</label>
+                                <select class="form-control selection custom-select" id="question9">
+                                <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="questions">"I seek adventure."</label>
+                                <select class="form-control selection custom-select" id="question10">
+                                <option selected></option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                            </div>
+                        </form>
+                        <br>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-secondary btn-md" id="submit-btn"><span class="glyphicon glyphicon-fire"></span>Submit Survey</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="modal clearfix" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body clearfix">
+                    <p><img style="max-height: 100%; max-width: 100%;" class="userImage clearfix" src=""></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $("#submit-btn").on("click", function(event) {
+            var imageURL = $("#photoInput").val();
+            var userName = $("#name").val().trim();
+            console.log(imageURL);
+            event.preventDefault();
+            var newFriend = {
+                name: $("#name").val().trim(),
+                image: $("#photoInput").val(),
+                answer: [$("select#question1").val(), $("select#question2").val(), $("select#question3").val(), $("select#question4").val(), $("select#question5").val(), $("select#question6").val(), $("select#question7").val(), $("select#question8").val(), $("select#question9").val(), $("select#question10").val()]
+            };
+            $("#myModal").modal("show");
+            $(".modal-title").html(userName);
+            $(".userImage").attr("src", imageURL);
+            $.ajax({
+                url: "/api/friends",
+                method: "POST",
+                data: newFriend,
+                traditional: true,
+            });
+
+            $("#name").val("");
+            $("#photoInput").val("");
+            $("select#question1").val("");
+            $("select#question2").val("");
+            $("select#question3").val("");
+            $("select#question4").val("");
+            $("select#question5").val("");
+            $("select#question6").val("");
+            $("select#question7").val("");
+            $("select#question8").val("");
+            $("select#question9").val("");
+            $("select#question10").val("");
+
+        });
+    </script>
+
+</body>
+
+</html>
