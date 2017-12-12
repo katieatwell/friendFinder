@@ -190,21 +190,56 @@
         $("#submit-btn").on("click", function(event) {
             var imageURL = $("#photoInput").val();
             var userName = $("#name").val().trim();
-            console.log(imageURL);
+            var tempclosest = 50;
+            var score = 0;
+            var closeFriend;
+            //console.log(imageURL);
+            console.log("new friend test: tc:" + tempclosest);
+
             event.preventDefault();
             var newFriend = {
                 name: $("#name").val().trim(),
                 image: $("#photoInput").val(),
                 answer: [$("select#question1").val(), $("select#question2").val(), $("select#question3").val(), $("select#question4").val(), $("select#question5").val(), $("select#question6").val(), $("select#question7").val(), $("select#question8").val(), $("select#question9").val(), $("select#question10").val()]
             };
-            $("#myModal").modal("show");
-            $(".modal-title").html(userName);
-            $(".userImage").attr("src", imageURL);
+
+
             $.ajax({
                 url: "/api/friends",
                 method: "POST",
                 data: newFriend,
                 traditional: true,
+            });
+
+
+
+            $.get("/api/friends", function(data) {
+                if (data.length == 1) {
+                    closeFriend = "There aren't enough people to compare yet!"
+                }
+                else {
+                    for (var i = 0; i < data.length - 1; i++) {
+                        score = 0;
+
+                        for (var h = 0; h < data[i].answer.length; h++) {
+                            score += Math.abs(newFriend.answer[h] - data[i].answer[h]);
+                            // console.log("New " + newFriend.answer[h] + "Datai " + data[i].answer[h]);
+                            // console.log(score);
+                        }
+
+                        console.log("if( score: " + score + " < tempClosest " + tempclosest);
+
+                        if (score < tempclosest) {
+                            tempclosest = score;
+                            closeFriend = data[i];
+                            console.log(closeFriend.name);
+
+                            $("#myModal").modal("show");
+                            $(".modal-title").html(closeFriend.name);
+                            $(".userImage").attr("src", closeFriend.image);
+                        }
+                    }
+                }
             });
 
             $("#name").val("");
